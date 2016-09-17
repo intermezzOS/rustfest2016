@@ -20,6 +20,209 @@ class: middle, center
 
 # hi, i'm <strong>@ag_dubs</strong>
 
+---
+class: middle, center
+
+![npm logo](public/img/npm_logo.png)
+
+---
+class: middle, center
+
+![rhizome](public/img/rhizome.jpg)
+# .title[intermezz]<strong>OS</strong>
+## .subtitle[a teaching operating system]
+
+---
+class: middle, top
+
+### intermezzOS is...
+## a teaching operating system, specifically focused on <strong>introducing systems programming concepts</strong> to experienced developers from other areas of programming.
+
+---
+class: middle, top
+
+# "do you wanna stay in tonight, put on comfy pants, and do this neat kernel tutorial?"
+<br/>
+# circle one: yes no
+
+---
+class: middle, top
+
+{{ reaction }}
+
+---
+class: middle, center
+
+# LET'S GET CLOSE TO THE METAL
+
+---
+class: middle, center
+
+# Phillip Opperman
+# Writing an OS in Rust
+# [os.phil-opp.com](os.phil-opp.com)
+
+---
+class: middle, center
+
+# wat is operating system?
+
+---
+class: middle, center
+
+# An operating system is a <strong>program that provides a platform for other programs</strong>. It provides two things to these programs: .highlight[abstractions] and .highlight[isolation].
+
+---
+class: middle, center
+
+# abstractions
+
+---
+class: middle, center
+
+![program-hardware](public/img/program_hardware.png)
+
+---
+class: middle, center
+
+![program-os-hardwares](public/img/program_os_hardware.png)
+
+---
+class: middle, center
+
+![program-vm-oss-hardwares](public/img/program_vm_os_hardware.png)
+
+---
+class: middle, left
+
+### We now have a pattern:
+
+- ## I have `A`.
+- ## `A` is written explicitly for `X`...
+- ## ... but I want to support `X` and `Y`,
+- ## so I put abstraction `B` in the middle.
+
+---
+class: middle, center
+
+# isolation
+
+---
+class: middle, top
+
+### <strong>intermezzo</strong> .subtitle[ |ˌin(t)ərˈmetsō|], noun
+## a light dramatic, musical, or other performance inserted between the acts of a play.
+
+---
+class: middle, center
+
+# wat is .highlight[kernel]?
+
+## the core component of an OS.
+
+---
+class: middle, center
+
+# OK! let's try this out
+
+---
+class: middle, center
+
+# <strong>prerequisites</strong>
+
+- ## virtualization
+- ## linux dependencies
+- ## utilities (optional)
+
+---
+class: middle, left
+
+# <strong>virtualization</strong>
+.subtitle[(if you are on OSX, ChromeOS, Windows*, etc)]
+
+- ## [Vagrant](https://www.vagrantup.com/): development environment manager
+- ## [VirtualBox](https://www.virtualbox.org/): virtualizer
+- ## [XQuartz](http://www.xquartz.org/): X11 Graphics
+
+<br/>
+<br/>
+<br/>
+*new windows has Ubuntu! so you can also use that
+
+---
+class: middle, left
+
+# <strong>linux dependencies</strong>
+
+- ### `nasm`: assembler (assembly -> binary)
+- ### `ld`: linker (makes binary out of other files)
+- ### `grub`: creates the bootable iso
+- ### `xorriso`: req'd by grub, filesystem manipulator
+- ### `QEMU`: fake-computer emulator
+
+---
+class: middle, left
+
+# <strong>utilities</strong>
+#### .subtitle[you don't need these, but they are nice for viewing generated code.]
+
+- ## `hexdump`: allows you to view generated binary
+- ## `objdump`: a nicer viewer for `.o` files
+
+---
+class: middle, center
+
+# what happens when you turn on your computer
+1. the hardware loads BIOS
+2. BIOS loads GRUB
+3. GRUB loads our kernel
+
+---
+class: middle, center
+
+# linking
+
+---
+class: middle, center
+
+# DEMO TIME!
+## hello world in assembly
+
+---
+class: middle, center
+
+# jumping into longmode: paging
+
+---
+class: middle, center
+
+# DEMO TIME!
+## hello world in rust
+
+---
+class: middle, center
+
+![guidon](public/img/guidon.jpg)
+
+---
+class: middle, center
+
+# teaching is nature's way of letting you know how sloppy your thinking is
+
+---
+class: middle, center
+
+![peter van roy](public/img/petervanroy.jpg)
+
+---
+class: middle, left
+
+# thanks!
+<br/>
+- ### ashley williams, [@ag_dubs](https://twitter.com/ag_dubs)
+- ### [intermezzos.github.io/rustfest2016](http://intermezzos.github.io/rustfest2016)
+- ### [@intermezzOSrs](https://twitter.com/intermezzosrs), [intermezzos.github.io](https://intermezzos.github.io/)
+
    </textarea>
     <script src="public/remark.js" type="text/javascript">
     </script>
