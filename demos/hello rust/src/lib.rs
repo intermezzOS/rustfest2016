@@ -3,13 +3,29 @@
 
 #[no_mangle]
 pub extern fn kmain() -> ! {
-    unsafe {
-        let vga = 0xb8000 as *mut u64;
+//    unsafe {
+//        let vga = 0xb8000 as *mut u64;
+//
+//        *vga = 0x2f592f412f4b2f4f;
+//    };
+//
+//    loop { }
+    let char_bytes = b"Hello World!";
 
-        *vga = 0x2f592f412f4b2f4f;
-    };
+    let color_byte = 0x1f;
 
-    loop { }
+
+    let mut message = [color_byte; 24];
+    for (i, char_byte) in char_bytes.into_iter().enumerate() {
+      message[i * 2] = *char_byte;
+    }
+
+    let buffer_ptr = (0xb8000  +1988) as *mut _;
+
+    unsafe { *buffer_ptr = message };
+
+    loop{}
+
 }
 
 #[lang = "eh_personality"]
