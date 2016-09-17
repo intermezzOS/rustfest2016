@@ -26,3 +26,23 @@ a:hover {
   color: #400AA7;
   font-weight: 700;
 }
+
+li {
+  text-indent: -1em;
+  margin-left: 0.6em;
+}
+
+/* source */
+h5 {
+  position: absolute;
+  bottom: 10px;
+  font-weight: 400;
+  margin-right: 20px;
+  font-size: 0.5em;
+}
+
+.no {
+  position: absolute;
+  top: -112px;
+  left: 0;
+}
