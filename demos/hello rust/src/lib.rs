@@ -3,13 +3,6 @@
 
 #[no_mangle]
 pub extern fn kmain() -> ! {
-//    unsafe {
-//        let vga = 0xb8000 as *mut u64;
-//
-//        *vga = 0x2f592f412f4b2f4f;
-//    };
-//
-//    loop { }
     let char_bytes = b"Hello World!";
 
     let color_byte = 0x1f;
