@@ -1,11 +1,13 @@
 #![feature(lang_items)]
 #![no_std]
 
+extern crate rlibc;
+
 #[no_mangle]
 pub extern fn kmain() -> ! {
-    let char_bytes = b"Hello World!";
+    let char_bytes = b" Hello RustFest! ";
 
-    let color_byte = 0x1f;
+    let color_byte = 0x9f;
 
 
     let mut message = [color_byte; 24];
