@@ -1,15 +1,21 @@
 #![feature(lang_items)]
 #![no_std]
 
+#![feature(plugin)]
+#![plugin(bytestool)]
+#[macro_use(sized_bytes)]
+
+extern crate sizedbytes;
+use sizedbytes::SizedBytes;
+
 #[no_mangle]
 pub extern fn kmain() -> ! {
-    let char_bytes = b"Hello World!";
+    const MESG : SizedBytes = sized_bytes!(b"Hello World");
 
     let color_byte = 0x1f;
 
-
-    let mut message = [color_byte; 24];
-    for (i, char_byte) in char_bytes.into_iter().enumerate() {
+    let mut message = [color_byte; MESG.size * 2 ];
+    for (i, char_byte) in MESG.bytes.into_iter().enumerate() {
       message[i * 2] = *char_byte;
     }
 

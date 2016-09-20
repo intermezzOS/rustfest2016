@@ -7,6 +7,8 @@ authors = ["Steve Klabnik <steve@steveklabnik.com>"]
 crate-type = ["staticlib"]
 
 [dependencies]
+bytestool = "0.2.0"
+sizedbytes = "0.1.0"
 
 [profile.release]
 panic = "abort"
